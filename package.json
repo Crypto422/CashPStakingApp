@@ -1,0 +1,57 @@
+{
+  "name": "theapesofficial",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@testing-library/jest-dom": "^5.15.0",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "@walletconnect/web3-provider": "^1.7.8",
+    "antd": "^4.17.3",
+    "axios": "^0.26.0",
+    "bootstrap": "^5.1.3",
+    "cryptocharts": "^1.1.2",
+    "ethers": "^5.6.2",
+    "jquery": "^3.6.0",
+    "react": "^17.0.2",
+    "react-bootstrap": "^2.0.3",
+    "react-clear-cache": "^1.4.12",
+    "react-crypto-chart": "^0.0.6",
+    "react-dom": "^17.0.2",
+    "react-multi-carousel": "^2.8.0",
+    "react-responsive-carousel": "^3.2.22",
+    "react-router-dom": "^6.0.2",
+    "react-scripts": "4.0.3",
+    "react-tabs": "^4.2.0",
+    "state-pool": "^0.6.0",
+    "web3modal": "^1.9.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "eslint-plugin-react-hooks": "^4.3.0"
+  }
+}
