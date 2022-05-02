@@ -42,7 +42,7 @@ export default function MainFlex() {
                 BUY
               </a>
               <Link className="theme_button" to="/nftbank">
-                NFTBANK
+                NFT&nbsp;BANK
               </Link>
               <Link className="theme_button" to="/theatm">
                 STAKE

@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React, { useState, useContext } from "react";
 import img_logo from "../assests/images/logo.png";
 import { Link } from "react-router-dom";
@@ -32,8 +33,14 @@ export default function Header() {
           <Link to="/">
             <h3 onClick={hideMenu}>HOME</h3>
           </Link>
-          <Link to="/bank">
-            <h3 onClick={hideMenu}>THE BANK</h3>
+          <a 
+            target="_blank"
+            href={`https://spookyswap.finance/`}
+          >
+             <h3 onClick={hideMenu}>BUY</h3>
+          </a>
+          <Link to="/nftbank">
+            <h3 onClick={hideMenu}>NFT&nbsp;BANK</h3>
           </Link>
           <Link to="/theatm">
             <h3 onClick={hideMenu}>AN ATM</h3>
