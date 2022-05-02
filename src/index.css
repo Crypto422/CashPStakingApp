@@ -424,7 +424,8 @@ body {
   max-width: 190px;
 }
 .tap_card_grp {
-  height: 230px !important;
+  /* height: auto !important; */
+  height: 280px !important;
 }
 .stats_card_grp_well {
   height: 200px;
@@ -590,7 +591,7 @@ body {
 }
 .ipt_grp {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   width: 90%;
 }
@@ -634,7 +635,7 @@ body {
 }
 .menu_btn_grp {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
 }
 .menu_grp {
   display: flex;
@@ -666,7 +667,7 @@ td {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5715;
-  text-align: start;
+  text-align: flex-start;
 }
 
 .ant-descriptions-item-content {

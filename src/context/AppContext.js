@@ -35,6 +35,12 @@ export const AppcontextProvider = ({ children }) => {
   const [isShowConnectModal, setIsShowConnectModal] = useState();
   const [isShowDisConnectModal, setIsShowDisConnectModal] = useState();
 
+  const [totalClaimedAmount, setTotalClaimedAmount] = useState();
+  const [totalDepositAmount, setTotalDepositAmount] = useState();
+  const [cashpBalance, setCashpBalance] = useState();
+  const [cashpPrice, setCashpPrice] = useState();
+  
+
 
   const web3Modal = new Web3Modal({
     cacheProvider: true,
@@ -64,6 +70,8 @@ export const AppcontextProvider = ({ children }) => {
     }
     setTheme(value);
   }
+
+;
 
   useEffect(() => {
     if (provider?.on) {
@@ -158,17 +166,7 @@ export const AppcontextProvider = ({ children }) => {
       if (account) {
         const contract = getStakingContract(library);
         const res = await contract.cashpPrice();
-        return Number(ethers.utils.formatEther(res.toString()));
-      }
-    }
-  }
-
-  const getCurrentClaimAmount = async () => {
-    if (library) {
-      if (account) {
-        const contract = getStakingContract(library);
-        const res = await contract.getTotalClaimAmount();
-        return Number(ethers.utils.formatEther(res.toString()));
+        return Number(res.toString()) / 100000000;
       }
     }
   }
@@ -177,7 +175,7 @@ export const AppcontextProvider = ({ children }) => {
     if (library) {
       if (account) {
         const contract = getStakingContract(library);
-        const res = await contract.getUserTotalClaimAmount();
+        const res = await contract.userClaimAmount(account);
         return Number(ethers.utils.formatEther(res.toString()));
       }
     }
@@ -187,15 +185,34 @@ export const AppcontextProvider = ({ children }) => {
     if (library) {
       if (account) {
         const contract = getStakingContract(library);
-        const res = await contract.getUserTotalDepositAmount();
+        const res = await contract.userLendsAmount(account);
         return Number(ethers.utils.formatEther(res.toString()));
       }
+    }
+  }
+
+  const setContractTotalLiquidity = async () => {
+    if (library) {
+      const depositamount = await getTotalDepositAmount();
+      const claimedamount = await getTotalClaimAmount();
+      const cashpprice = await getCashpPrice();
+      const cashpbalance = await getAccCashpBalance();
+     
+
+      setTotalDepositAmount(depositamount);
+      setTotalClaimedAmount(claimedamount);
+      setCashpBalance(cashpbalance);
+      setCashpPrice(cashpprice);
     }
   }
 
   return (
     <AppContext.Provider
       value={{
+        totalClaimedAmount,
+        totalDepositAmount,
+        cashpBalance,
+        cashpPrice,
         connectWallet,
         disconnectWallet,
         disconnect,
@@ -217,9 +234,9 @@ export const AppcontextProvider = ({ children }) => {
         setIsShowConnectModal,
         setCashPContractLiquidity,
         getCashpPrice,
-        getCurrentClaimAmount,
         getTotalClaimAmount,
-        getTotalDepositAmount
+        getTotalDepositAmount,
+        setContractTotalLiquidity
       }}
     >
       {children}
