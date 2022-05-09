@@ -28,11 +28,13 @@ const Tap = () => {
     totalClaimedAmount,
     totalDepositAmount,
     cashpBalance,
+    currentClaimAmount,
     cashpPrice,
     setContractTotalLiquidity
   } = useContext(AppContext);
   const [depositAmount, setDepositAmount] = useState(0);
   const [isCompounding, setIsCompounding] = useState();
+  const [isPreClaiming, setIsPreClaiming] = useState();
   const [isDepositing, setIsDepositing] = useState();
   const [isClaiming, setIsClaming] = useState();
 
@@ -98,6 +100,31 @@ const Tap = () => {
     }
   };
 
+  const PreClaim = async () => {
+    setIsPreClaiming(true);
+    let stakingContract;
+    stakingContract = getStakingContract(library.getSigner());
+    try {
+      if (account) {
+        const res = await stakingContract
+          .preClaim()
+          .catch((err) => { setIsPreClaiming(false) });
+        const data = await res.wait();
+        if (data) {
+          setIsPreClaiming(false);
+          setContractTotalLiquidity();
+        } else {
+          setIsPreClaiming(false);
+        }
+      } else {
+        setIsPreClaiming(false);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+
   const Claim = async () => {
     setIsClaming(true);
     let stakingContract;
@@ -130,6 +157,8 @@ const Tap = () => {
     }
 
   }, [account])
+
+
 
   return (
     <div>
@@ -337,14 +366,13 @@ const Tap = () => {
                   }
                 </div>
               </div>
-              <div className="btn_format">
+              <div className="btn_format" style={{ display: 'flex', justifyContent:'space-between' }}>
                 <button
                   className="theme_button"
                   onClick={Compound}
                   style={{
-                    width: "40%",
+                    width: "100%",
                     marginTop: "30px",
-                    marginRight: "20%",
                   }}
                   disabled={isCompounding || totalDepositAmount === 0}
                 >
@@ -370,8 +398,39 @@ const Tap = () => {
                 </button>
                 <button
                   className="theme_button"
+                  onClick={PreClaim}
+                  style={{
+                    width: "100%",
+                    marginTop: "30px",
+                    marginLeft: '5px',
+                    marginRight: '5px'
+                  }}
+                  disabled={isPreClaiming || totalDepositAmount === 0}
+                >
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    strokeWidth="0"
+                    viewBox="0 0 20 20"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                  &nbsp;
+                  {
+                    isPreClaiming ? "PreClaiming now..." : "PreCLAIM"
+                  }
+                </button>
+                <button
+                  className="theme_button"
                   onClick={Claim}
-                  style={{ width: "40%", marginTop: "30px" }}
+                  style={{ width: "100%", marginTop: "30px" }}
                   disabled={isClaiming || totalDepositAmount === 0}
                 >
                   <svg
@@ -414,6 +473,19 @@ const Tap = () => {
                     {
                       cashpPrice ? cashpPrice : "Fetching..."
                     }
+                  </div>
+                </Grid>
+                <Grid item xs={12} sm={4} md={4}>
+                  <div
+                    style={{ marginTop: "20px", textAlign: 'center' }}
+                    className="well_tab_price btn_formart_mobile"
+                  >
+                    You can claim :<span>
+                      {
+                        currentClaimAmount >= 0 ? currentClaimAmount : "Fetching..."
+                      }
+                      &nbsp;CASHP
+                    </span>
                   </div>
                 </Grid>
 
@@ -468,7 +540,7 @@ const Tap = () => {
                     style={{ marginTop: "20px" }}
                     className="well_tab_price btn_formart_mobile"
                   >
-                    A minimum of 0.1 Cashprequired for deposits
+                    A minimum of 0.1 CashP required for deposits
                   </div>
                 </Grid>
                 <Grid item xs={12} md={2}></Grid>

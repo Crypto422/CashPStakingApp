@@ -39,7 +39,7 @@ export const AppcontextProvider = ({ children }) => {
   const [totalDepositAmount, setTotalDepositAmount] = useState();
   const [cashpBalance, setCashpBalance] = useState();
   const [cashpPrice, setCashpPrice] = useState();
-  
+  const [currentClaimAmount, setCurrentClaimAmount] = useState();
 
 
   const web3Modal = new Web3Modal({
@@ -171,11 +171,22 @@ export const AppcontextProvider = ({ children }) => {
     }
   }
 
+  const getClaimAmount = async () => {
+    if (library) {
+      if (account) {
+        const contract = getStakingContract(library);
+        const res = await contract.userAvailableClaimAmount(account);
+        return  Number(ethers.utils.formatEther(res.toString()));
+        
+      }
+    }
+  }
+
   const getTotalClaimAmount = async () => {
     if (library) {
       if (account) {
         const contract = getStakingContract(library);
-        const res = await contract.userClaimAmount(account);
+        const res = await contract.userClaimedAmount(account);
         return Number(ethers.utils.formatEther(res.toString()));
       }
     }
@@ -197,12 +208,13 @@ export const AppcontextProvider = ({ children }) => {
       const claimedamount = await getTotalClaimAmount();
       const cashpprice = await getCashpPrice();
       const cashpbalance = await getAccCashpBalance();
-     
+      const claimamount = await getClaimAmount();
 
       setTotalDepositAmount(depositamount);
       setTotalClaimedAmount(claimedamount);
       setCashpBalance(cashpbalance);
       setCashpPrice(cashpprice);
+      setCurrentClaimAmount(claimamount);
     }
   }
 
@@ -213,6 +225,7 @@ export const AppcontextProvider = ({ children }) => {
         totalDepositAmount,
         cashpBalance,
         cashpPrice,
+        currentClaimAmount,
         connectWallet,
         disconnectWallet,
         disconnect,
