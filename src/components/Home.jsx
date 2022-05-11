@@ -142,38 +142,47 @@ export default function MainFlex() {
         </div>
         <div className="stats_below_text">
           Help The Less Privileged
+          <br />
           We can make a world a better place by helping each other through the CashPulse Charitable Protocol
         </div>
         <div className="stats_below_text">
           Enrich Cashswap Users
+          <br />
           Users get rewarded for Buying/Selling and Liquidity Providing on our CashSwap
         </div>
         <div className="stats_below_text">
           Enrich CashPad Users
+          <br />
           The launch of CashPad is the largest New Incubator in history. Thousands of Families can be able to invest into good projects before anyone else does and earn a fortune from home.
         </div>
         <div className="stats_below_text">
           Enrich NFTBANK Users
+          <br />
           With the mad rush in the NFT space, The NFTBANK is set to create a new class of whales through our NFTs Marketplace
         </div>
         <div className="stats_below_text">
           Easy to use
+          <br />
           Your MetaMask wallet just works, you only have to connect to our platform to access Cash Printer.
         </div>
         <div className="stats_below_text">
           Lower gas fees
+          <br />
           CashP is built on the PulseChain having the lowest transactions fees.
         </div>
         <div className="stats_below_text">
           Decision Taking
+          <br />
           This is a community base project. With the help of CashPump, users can happily delegate on what should be done to improve our ecosystem
         </div>
         <div className="stats_below_text">
           Improve Affiliate Theory
+          <br />
           Users can refer and earn a juicy instant Commission from the Casher program
         </div>
         <div className="stats_below_text">
           Empower CashP holders
+          <br />
           Cash Printer native token $CashP can be staked and farm to earn a sustainable daily 2% ROI for a duration period of 180 days making a total of 360%
         </div>
       </Grid>
