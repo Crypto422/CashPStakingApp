@@ -138,50 +138,50 @@ export default function MainFlex() {
           The official token of the Cash Printer Network is on the PULSECHAIN  (PLS) that captures value by being scarce, deflationary, censorship resistant, and by being built on a robust, truly decentralized blockchain.
         </div>
         <div className="stats_below_text">
-          Cash Printer Goals
+          <b>Cash Printer Goals</b>
         </div>
         <div className="stats_below_text">
-          Help The Less Privileged
+          <b>Help The Less Privileged</b>
           <br />
           We can make a world a better place by helping each other through the CashPulse Charitable Protocol
         </div>
         <div className="stats_below_text">
-          Enrich Cashswap Users
+          <b> Enrich Cashswap Users</b>
           <br />
           Users get rewarded for Buying/Selling and Liquidity Providing on our CashSwap
         </div>
         <div className="stats_below_text">
-          Enrich CashPad Users
+          <b>Enrich CashPad Users</b>
           <br />
           The launch of CashPad is the largest New Incubator in history. Thousands of Families can be able to invest into good projects before anyone else does and earn a fortune from home.
         </div>
         <div className="stats_below_text">
-          Enrich NFTBANK Users
+          <b>Enrich NFTBANK Users</b>
           <br />
           With the mad rush in the NFT space, The NFTBANK is set to create a new class of whales through our NFTs Marketplace
         </div>
         <div className="stats_below_text">
-          Easy to use
+          <b>Easy to use</b>
           <br />
           Your MetaMask wallet just works, you only have to connect to our platform to access Cash Printer.
         </div>
         <div className="stats_below_text">
-          Lower gas fees
+          <b>Lower gas fees</b>
           <br />
           CashP is built on the PulseChain having the lowest transactions fees.
         </div>
         <div className="stats_below_text">
-          Decision Taking
+          <b>Decision Taking</b>
           <br />
           This is a community base project. With the help of CashPump, users can happily delegate on what should be done to improve our ecosystem
         </div>
         <div className="stats_below_text">
-          Improve Affiliate Theory
+          <b>Improve Affiliate Theory</b>
           <br />
           Users can refer and earn a juicy instant Commission from the Casher program
         </div>
         <div className="stats_below_text">
-          Empower CashP holders
+          <b>Empower CashP holders</b>
           <br />
           Cash Printer native token $CashP can be staked and farm to earn a sustainable daily 2% ROI for a duration period of 180 days making a total of 360%
         </div>
