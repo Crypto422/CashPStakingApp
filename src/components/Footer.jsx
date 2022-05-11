@@ -86,7 +86,7 @@ const Footer = () => {
 
                 <a
                   className="theme_button"
-                  href="https://t.me/cashprinter_ann"
+                  href="https://t.me/cashprinters"
                 >
                   <div style={{ display: "flex", alignItems: "center" }}>
                     <svg
