@@ -126,23 +126,55 @@ export default function MainFlex() {
               <div className="stats_card_text_number">1,000,000</div>
             </div>
           </Grid>
-         
+
         </Grid>
       </Grid>
 
       <Grid container justifyContent="center" className="stats_below_container">
         <div className="stats_below_text">
-          Cash Printer Network is the latest project developed by CashP Team.
-          Cash Printer is a De-Fi Yield Staking/Farming Protocol that provides a
-          decentralized financial asset which rewards users with a sustainable
-          fixed compound interest model through the use of it’s unique
-          ecosystem. The official token of the Cash Printer Network is on the
-          Fantom Chain (FTM) that captures value by being scarce, deflationary,
-          censorship resistant, and by being built on a robust, truly
-          decentralized blockchain. The recommended exchange for trading CashP
-          is The Bank exchange which can be found directly on the platform's
-          website under. The Bank tab provides the lowest prices and highest
-          liquidity, resulting in less slippage for larger trades.
+          Cash Printer Network is the latest project developed by CashP Team. Cash Printer is a De-Fi Yield Staking/Farming Protocol, Incubator, Charity Focused and NFTBANK that provides a decentralized financial asset which rewards users with a sustainable fixed compound interest model through the use of it’s unique ecosystem.
+        </div>
+        <div className="stats_below_text">
+          The official token of the Cash Printer Network is on the PULSECHAIN  (PLS) that captures value by being scarce, deflationary, censorship resistant, and by being built on a robust, truly decentralized blockchain.
+        </div>
+        <div className="stats_below_text">
+          Cash Printer Goals
+        </div>
+        <div className="stats_below_text">
+          Help The Less Privileged
+          We can make a world a better place by helping each other through the CashPulse Charitable Protocol
+        </div>
+        <div className="stats_below_text">
+          Enrich Cashswap Users
+          Users get rewarded for Buying/Selling and Liquidity Providing on our CashSwap
+        </div>
+        <div className="stats_below_text">
+          Enrich CashPad Users
+          The launch of CashPad is the largest New Incubator in history. Thousands of Families can be able to invest into good projects before anyone else does and earn a fortune from home.
+        </div>
+        <div className="stats_below_text">
+          Enrich NFTBANK Users
+          With the mad rush in the NFT space, The NFTBANK is set to create a new class of whales through our NFTs Marketplace
+        </div>
+        <div className="stats_below_text">
+          Easy to use
+          Your MetaMask wallet just works, you only have to connect to our platform to access Cash Printer.
+        </div>
+        <div className="stats_below_text">
+          Lower gas fees
+          CashP is built on the PulseChain having the lowest transactions fees.
+        </div>
+        <div className="stats_below_text">
+          Decision Taking
+          This is a community base project. With the help of CashPump, users can happily delegate on what should be done to improve our ecosystem
+        </div>
+        <div className="stats_below_text">
+          Improve Affiliate Theory
+          Users can refer and earn a juicy instant Commission from the Casher program
+        </div>
+        <div className="stats_below_text">
+          Empower CashP holders
+          Cash Printer native token $CashP can be staked and farm to earn a sustainable daily 2% ROI for a duration period of 180 days making a total of 360%
         </div>
       </Grid>
       <div className="container">
