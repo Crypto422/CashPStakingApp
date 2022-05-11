@@ -35,7 +35,7 @@ export default function Header() {
           </Link>
           <a 
             target="_blank"
-            href={`https://spookyswap.finance/`}
+            href={`https://pulsex.com`}
           >
              <h3 onClick={hideMenu}>BUY</h3>
           </a>

@@ -37,7 +37,7 @@ export default function MainFlex() {
             <div className="flex">
               <a className="theme_button"
                 target="_blank"
-                href={`https://spookyswap.finance/`}
+                href={`https://pulsex.com`}
               >
                 BUY
               </a>

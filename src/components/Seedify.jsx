@@ -45,7 +45,7 @@ const CashP = () => {
         <Grid item xs={10} sm={6} md={3} className="seed_a_tag_grp">
           <a
             className="gen_btn new_btns join_banner_btn"
-            href="https://Spookyswap.finance/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&amp;outputCurrency=0x477bc8d23c634c154061869478bce96be6045d12"
+            href="https://pulsex.comswap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&amp;outputCurrency=0x477bc8d23c634c154061869478bce96be6045d12"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -55,7 +55,7 @@ const CashP = () => {
         <Grid item xs={10} sm={6} md={3} className="seed_a_tag_grp">
           <a
             className="gen_btn new_btns join_banner_btn"
-            href="https://Spookyswap.finance/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&amp;outputCurrency=0x477bc8d23c634c154061869478bce96be6045d12"
+            href="https://pulsex.comswap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&amp;outputCurrency=0x477bc8d23c634c154061869478bce96be6045d12"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -65,7 +65,7 @@ const CashP = () => {
         <Grid item xs={10} sm={6} md={3} className="seed_a_tag_grp">
           <a
             className="gen_btn new_btns join_banner_btn"
-            href="https://Spookyswap.finance/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&amp;outputCurrency=0x477bc8d23c634c154061869478bce96be6045d12"
+            href="https://pulsex.comswap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&amp;outputCurrency=0x477bc8d23c634c154061869478bce96be6045d12"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -75,7 +75,7 @@ const CashP = () => {
         <Grid item xs={10} sm={6} md={3} className="seed_a_tag_grp">
           <a
             className="gen_btn new_btns join_banner_btn"
-            href="https://Spookyswap.finance/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&amp;outputCurrency=0x477bc8d23c634c154061869478bce96be6045d12"
+            href="https://pulsex.comswap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&amp;outputCurrency=0x477bc8d23c634c154061869478bce96be6045d12"
             target="_blank"
             rel="noopener noreferrer"
           >
