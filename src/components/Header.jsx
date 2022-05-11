@@ -40,7 +40,7 @@ export default function Header() {
              <h3 onClick={hideMenu}>BUY</h3>
           </a>
           <Link to="/nftbank">
-            <h3 onClick={hideMenu}>NFT&nbsp;BANK</h3>
+            <h3 onClick={hideMenu}>NFTBANK</h3>
           </Link>
           <Link to="/theatm">
             <h3 onClick={hideMenu}>AN ATM</h3>

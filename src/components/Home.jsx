@@ -27,7 +27,7 @@ export default function MainFlex() {
           <Grid item xs={12} sm={8} md={6}>
             <div className="home_f_text">
               The next big passive income printer on the{" "}
-              <span style={{ fontWeight: "bold" }}>FANTOM</span> network
+              <span style={{ fontWeight: "bold" }}>PULSECHAIN</span> network
             </div>
           </Grid>
         </Grid>
@@ -42,7 +42,7 @@ export default function MainFlex() {
                 BUY
               </a>
               <Link className="theme_button" to="/nftbank">
-                NFT&nbsp;BANK
+                NFTBANK
               </Link>
               <Link className="theme_button" to="/theatm">
                 STAKE
